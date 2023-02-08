@@ -138,7 +138,7 @@ abstract class Layotter_Element extends Layotter_Editable {
      * This allows element type developers to enqueue scripts and styles required to display this element
      * correctly in the frontend.
      */
-    final private function register_frontend_hooks() {
+    private function register_frontend_hooks() {
         if (!is_admin()) {
             call_user_func(array(get_called_class(), 'frontend_assets'));
         }
